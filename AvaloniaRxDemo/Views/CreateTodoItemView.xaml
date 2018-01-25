@@ -1,0 +1,35 @@
+﻿<UserControl
+    xmlns="https://github.com/avaloniaui">
+    <Grid ColumnDefinitions="Auto,*"
+          RowDefinitions="Auto,Auto,Auto,Auto, Auto">
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0">
+            Name:
+        </TextBlock>
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 Text="{Binding Name}"></TextBox>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0">
+            Description:
+        </TextBlock>
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Text="{Binding Description}"></TextBox>
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0">
+            Duration:
+        </TextBlock>
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Text="{Binding Duration}"></TextBox>
+
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="3"
+                Command="{Binding CreateCommand}">Create</Button>
+    </Grid>
+</UserControl>

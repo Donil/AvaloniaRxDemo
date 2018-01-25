@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>netcoreapp1.1;net461</TargetFrameworks>
+        <TargetFrameworks>netcoreapp1.1</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <Compile Update="**\*.xaml.cs">
@@ -12,8 +12,27 @@
         </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="0.5.0" />
-        <PackageReference Include="Avalonia.Desktop" Version="0.5.0" />
+      <None Remove="Views\CreateTodoItemView.xaml" />
+      <None Remove="Views\StatisticView.xaml" />
+      <None Remove="Views\TodoItemsDetailsView.xaml" />
+      <None Remove="Views\TodoItemsListView.xaml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Autofac" Version="4.6.2" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+        <PackageReference Include="Avalonia" Version="0.5.1" />
+        <PackageReference Include="Avalonia.Desktop" Version="0.5.1" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.1.1" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
         <PackageReference Include="Serilog.Sinks.Trace" Version="2.1.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Update="Views\CreateTodoItemView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Views\TodoItemsDetailsView.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </EmbeddedResource>
     </ItemGroup>
 </Project>

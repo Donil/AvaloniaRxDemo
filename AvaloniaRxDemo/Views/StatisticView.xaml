@@ -1,0 +1,54 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui">
+  <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+        ColumnDefinitions="Auto,*">
+    <TextBlock Grid.Row="0"
+               Grid.Column="0">
+      Total Items:
+    </TextBlock>
+    <TextBox Grid.Row="0"
+             Grid.Column="1"
+             IsReadOnly="True"
+             Text="{Binding TotalItems}">
+    </TextBox>
+
+    <TextBlock Grid.Row="1"
+               Grid.Column="0">
+      Total Duration:
+    </TextBlock>
+    <TextBox Grid.Row="1"
+             Grid.Column="1"
+             IsReadOnly="True"
+             Text="{Binding TotalDuration}">
+    </TextBox>
+
+    <TextBlock Grid.Row="2"
+               Grid.Column="0">
+      Average Duration:
+    </TextBlock>
+    <TextBox Grid.Row="2"
+             Grid.Column="1"
+             IsReadOnly="True"
+             Text="{Binding AverageDuration}">
+    </TextBox>
+
+    <TextBlock Grid.Row="3"
+               Grid.Column="0">
+      Min Duration:
+    </TextBlock>
+    <TextBox Grid.Row="3"
+             Grid.Column="1"
+             IsReadOnly="True"
+             Text="{Binding MinDuration}">
+    </TextBox>
+
+    <TextBlock Grid.Row="4"
+               Grid.Column="0">
+      Max Duration:
+    </TextBlock>
+    <TextBox Grid.Row="4"
+             Grid.Column="1"
+             IsReadOnly="True"
+             Text="{Binding MaxDuration}">
+    </TextBox>
+  </Grid>
+</UserControl>
